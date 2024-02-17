@@ -8,7 +8,7 @@
     
 
     <div class="mt-20 mb-20 p-2 flex flex-col bg-blue-100 w-1/2 m-auto">
-        <h1 class="font-medium text-blue-500 text-center text-2xl">Add Learning Course</h1>
+        <h1 class="font-medium text-blue-500 text-center text-2xl mb-5">Add Learning Course</h1>
         <form action="{{ url('/') }}/learning" class="flex flex-col" method="post">
             @csrf
             <input type="text" class="p-2 m-2" name="name" placeholder="Course Name" value="{{ old('name') }}">

@@ -7,8 +7,8 @@
 @section('main-section')
     <div class="flex w-4/5 m-auto mb-20 mt-20 justify-evenly flex-wrap">
         @foreach ($learning as $value)
-            <div class="bg-blue-50 w-1/4 m-2 p-2">
-                <img class="w-full" src="{{ $value->image_url }}" alt="">
+            <div class="bg-slate-100 w-1/4 m-2 p-2 flex flex-col">
+                <img class="w-full h-1/2 object-cover" src="{{ $value->image_url }}" alt="">
                 <h2 class="font-bold text-blue-500 text-xl mt-2 mb-2">{{ $value->name }}</h2>
 
                 @if ($value->source == 'yt')
@@ -27,8 +27,11 @@
 
                 <p class="font-medium">Author : {{ $value->author }}</p>
                 <p class="font-medium">Duration : {{ $value->duration }} Hours</p>
-                <p>{{ $value->description }}</p>
-                <a href="{{ $value->redirect_url }}"><button class="bg-blue-500 mt-2 p-2 text-white font-medium">See
+
+                <p>{{ implode(' ', array_slice(str_word_count($value->description, 1), 0, 15)) }}...</p>
+
+                
+                <a class="mt-auto" href="{{ $value->redirect_url }}"><button class="bg-blue-500 mt-2 p-2 text-white font-medium">See
                         Course</button></a>
             </div>
         @endforeach

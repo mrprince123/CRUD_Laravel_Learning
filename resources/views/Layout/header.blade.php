@@ -13,7 +13,7 @@
 <body>
 
     <div class="flex p-4 flex-row justify-between bg-blue-200">
-        <a href="{{url('/')}}"><h1 class="text-xl">Blog<span class="text-blue-400 font-bold">Pro</span></h1></a>
+        <a href="{{url('/')}}"><h1 class="text-xl">Learning<span class="text-blue-400 font-bold">Pro</span></h1></a>
         <div>
             <a class="m-2 font-medium" href="{{url('/')}}">Home</a>
             <a class="m-2 font-medium" href="{{url('/about')}}">About</a>

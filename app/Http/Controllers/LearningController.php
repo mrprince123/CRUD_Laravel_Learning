@@ -7,11 +7,13 @@ use App\Models\Learning;
 
 class LearningController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('learning');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
         $request->validate(
             [
@@ -38,19 +40,18 @@ class LearningController extends Controller
         return redirect('learning-view');
     }
 
-    public function view(){
-
+    public function view()
+    {
         $learning = Learning::all();
         $data = compact('learning');
         return view('learning-view')->with($data);
-        
     }
 
-    public function update(Request $request, $id){
-
+    public function update(Request $request, $id)
+    {
     }
 
-    public function delete(Request $request, $id){
-
+    public function delete(Request $request, $id)
+    {
     }
 }

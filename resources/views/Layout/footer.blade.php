@@ -1,6 +1,6 @@
 <footer class="bg-blue-200 flex flex-col text-center">
     <h1 class="font-bold text-2xl m-4">Sniper <span class="text-blue-400">Developer</span></h1>
-    <p class="m-4">Blog Pro is a blog website where you will find great tutorials on web
+    <p class="m-4">Learning <span class="font-medium text-blue-500">Pro</span> is a blog website where you will find great tutorials on web
         design and development. Here each tutorial is beautifully described step by step with the
         required and short code.
     </p>
